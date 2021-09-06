@@ -3,7 +3,7 @@
   import Surface from "./surface/Surface.ce.vue";
   const elements = ref([])
   function addElement(element){
-    elements.value.push(element)
+    elements.value.push((element.detail && element.detail[0]) || element);
   }
 </script>
 
@@ -12,7 +12,7 @@
     Normal: <surface @created="addElement" :elements="elements"/>
   </p>
   <p>
-    WebComponent: <super-surface ref="supersurface" @created="addElement" .elements="elements"/>
+    WebComponent: <super-surface ref="supersurface" @created="addElement" :elements.prop="elements"/>
   </p>
 </template>
 
