@@ -9,10 +9,13 @@
 
 <template>
   <p>
-    Normal: <surface @created="addElement" :elements="elements"/>
+    the two following component are sharing the same data. Click and drag to add rectangles.
   </p>
   <p>
-    WebComponent: <super-surface ref="supersurface" @created="addElement" :elements.prop="elements"/>
+    Surface as a normal component: <surface class="surface" @created="addElement" :elements="elements"/>
+  </p>
+  <p>
+    Surface in a webComponent: <super-surface @created="addElement" .elements="elements"/>
   </p>
 </template>
 
@@ -24,5 +27,11 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.surface{
+  background-color: whitesmoke;
+  border-style: dashed;
+  cursor: crosshair;
 }
 </style>

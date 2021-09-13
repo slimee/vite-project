@@ -3,8 +3,8 @@
        width="400" height="300" style="pointer-events: all"
         @mousedown.stop="mouseDown"
   >
-    <rect v-for="element in elements" v-bind="element" fill="none" stroke="black" stroke-width="0.5"/>
-    <rect v-bind="creatingElement" fill="none" stroke="grey" stroke-width="0.5"/>
+    <rect v-for="element in elements" v-bind="element" fill="blue" stroke="black" stroke-width="1"/>
+    <rect v-bind="creatingElement" fill="red" stroke="grey" stroke-width="1" opacity="0.5"/>
   </svg>
 </template>
 
@@ -64,5 +64,7 @@ import {ref, toRefs} from 'vue'
 <style scoped>
   .surface{
     background-color: whitesmoke;
+    border-style: dashed;
+    cursor: crosshair;
   }
 </style>
