@@ -1,3 +1,5 @@
+This project is to POC the creation & usage of webcomponents with Vue.
+
 done:
 - create a vue component that display an editable surface
 - turn the surface component as a web component
