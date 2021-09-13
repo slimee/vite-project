@@ -7,3 +7,6 @@ next:
 - publish the web component
 - use the webcomponent from an minimal html file
 - do not include the framework in the webcomponent, use a common loaded framework
+
+usage:
+- yarn && yarn dev
